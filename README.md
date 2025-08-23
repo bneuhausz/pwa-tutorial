@@ -1,3 +1,5 @@
+This repo contains the source code for my [Angular PWA tutorial, which you can find here.](https://bneuhausz.dev/blog/angular-pwa-tutorial-part-1)
+
 # PwaTutorial
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3.
