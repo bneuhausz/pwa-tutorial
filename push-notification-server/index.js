@@ -2,6 +2,7 @@ import express from 'express';
 import webpush from 'web-push';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 dotenv.config();
 
@@ -15,6 +16,9 @@ const app = express();
 const port = 3000;
 let subscription;
 
+app.use(cors({
+  origin: 'http://localhost:8080'
+}));
 app.use(bodyParser.json());
 
 app.post('/subscribe', (req, res) => {
@@ -25,8 +29,7 @@ app.post('/subscribe', (req, res) => {
 app.post('/notify', (req, res) => {
   const payload = {
     notification: {
-      title: 'Notification title',
-      body: 'Notification message'
+      title: 'Test notification'
     }
   };
 
