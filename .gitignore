@@ -40,3 +40,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+/push-notification-server/node_modules
+/push-notification-server/.env
