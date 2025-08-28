@@ -43,3 +43,6 @@ Thumbs.db
 
 /push-notification-server/node_modules
 /push-notification-server/.env
+
+/src/environments/environment.ts
+/src/environments/environment.development.ts
