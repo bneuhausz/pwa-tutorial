@@ -1,6 +1,8 @@
 This repo contains the source code for my Angular PWA tutorial, which you can find here:
 - [Part 1 - Setup](https://bneuhausz.dev/blog/angular-pwa-tutorial-part-1)
 - [Part 2 - New version notification](https://bneuhausz.dev/blog/angular-pwa-tutorial-part-2)
+- [Part 3 - Node backend for sending push notifications](https://bneuhausz.dev/blog/angular-pwa-tutorial-part-3)
+- [Part 4 - Push notification frontend implementation](https://bneuhausz.dev/blog/angular-pwa-tutorial-part-4)
 
 # PwaTutorial
 
