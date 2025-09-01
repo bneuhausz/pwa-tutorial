@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/service-worker/config/schema.json",
+  "appData": {
+    "version": "2.0.0"
+  },
   "index": "/index.html",
   "assetGroups": [
     {
@@ -24,6 +27,20 @@
         "files": [
           "/**/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
         ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "todos",
+      "urls": [
+        "https://jsonplaceholder.typicode.com/todos"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 1,
+        "maxAge": "1d",
+        "timeout": "5s"
       }
     }
   ]
