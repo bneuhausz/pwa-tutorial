@@ -13,34 +13,42 @@ webpush.setVapidDetails(
 );
 
 const app = express();
-const port = 3000;
-let subscription;
+const port = process.env.PORT || 3000;
+const subscriptions = [];
 
 app.use(cors({
-  origin: 'http://localhost:8080'
+  origin: process.env.CORS_ALLOWED_ORIGIN || 'http://localhost:8080'
 }));
 app.use(bodyParser.json());
 
 app.post('/subscribe', (req, res) => {
-  subscription = req.body;
+  const ttl = Date.now() + 5 * 60 * 1000;
+  subscriptions.push({ sub: req.body, ttl });
   res.status(201).send();
 });
 
 app.post('/notify', (req, res) => {
+  const now = Date.now();
+  for (let i = subscriptions.length - 1; i >= 0; i--) {
+    if (subscriptions[i].ttl < now) {
+      subscriptions.splice(i, 1);
+    }
+  }
+
   const payload = {
     notification: {
       title: 'Test notification'
     }
   };
 
-  webpush.sendNotification(subscription, JSON.stringify(payload))
-    .then(() => res.status(204).send())
+  Promise.all(subscriptions.map(subscription => webpush.sendNotification(subscription.sub, JSON.stringify(payload))))
+    .then(() => res.sendStatus(204))
     .catch(err => {
-      console.error('Error sending notification:', err);
+      console.error('Error while sending push notifications:', err);
       res.sendStatus(500);
     });
 });
 
 app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+  console.log(`Server is running at port: ${port}`);
 });
