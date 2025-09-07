@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1757236178082,
+  "timestamp": 1757236837387,
   "appData": {
     "version": "2.0.0"
   },
@@ -16,7 +16,7 @@
       "urls": [
         "/pwa-tutorial/favicon.ico",
         "/pwa-tutorial/index.html",
-        "/pwa-tutorial/main-P26IS4QN.js",
+        "/pwa-tutorial/main-R5SLMSIE.js",
         "/pwa-tutorial/manifest.webmanifest",
         "/pwa-tutorial/polyfills-5CFQRCPP.js",
         "/pwa-tutorial/styles-6BOSJQZ2.css"
@@ -71,8 +71,8 @@
     "/pwa-tutorial/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/pwa-tutorial/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
     "/pwa-tutorial/icons/nb_logo_original.avif": "2d1204e669e43878fd344137fd6e32041e6bc601",
-    "/pwa-tutorial/index.html": "92fd2c26ad7062a60679287f5df2ebef8dfcf7cf",
-    "/pwa-tutorial/main-P26IS4QN.js": "02da4cb00b11b329be260aa11aec45b507cb8741",
+    "/pwa-tutorial/index.html": "6940b50449bfb96a3aa523d6f665066f14e59a1e",
+    "/pwa-tutorial/main-R5SLMSIE.js": "2c09dabf44c8d79ecf0371c2cf34d4af3b2a171c",
     "/pwa-tutorial/manifest.webmanifest": "07a11793bafd070331b95c5ed471546a22b7d653",
     "/pwa-tutorial/polyfills-5CFQRCPP.js": "f2241e9a25858f895ce299d15f6f22e849e2fd72",
     "/pwa-tutorial/styles-6BOSJQZ2.css": "404e91d1ba410514a45558ee3da37032064fa7de"
