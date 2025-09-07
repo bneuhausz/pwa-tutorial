@@ -24,8 +24,8 @@ interface AppData {
       <span>🚫 Offline</span>
     }
 
-    <button (click)="subscribe()">Subscribe to Notifications</button>
-    <button (click)="notify()">Send Notification</button>
+    <button (click)="subscribe()" [disabled]="isSubscribeDisabled()">Subscribe to Notifications</button>
+    <button (click)="notify()" [disabled]="isNotifyDisabled()">Send Notification</button>
     <button (click)="toggleTodos()">Toggle Todos</button>
 
     @if (showTodos()) {
@@ -44,6 +44,8 @@ export class App {
   protected readonly title = signal('pwa-tutorial');
   protected readonly isNewVersionReady = signal(false);
   protected readonly newVersion = signal('');
+  protected readonly isSubscribeDisabled = signal(false);
+  protected readonly isNotifyDisabled = signal(false);
 
   protected readonly showTodos = signal(false);
 
@@ -64,15 +66,38 @@ export class App {
 
   async subscribe() {
     if (this.swPush.isEnabled) {
+      this.isSubscribeDisabled.set(true);
       const sub = await this.swPush.requestSubscription({
         serverPublicKey: environment.vapidPublicKey
       });
-      this.notification.subscribe(sub).subscribe();
+      this.notification.subscribe(sub).subscribe(
+        {
+          next: () => {
+            alert('Subscribed to notifications');
+            this.isSubscribeDisabled.set(false);
+          },
+          error: err => {
+            alert('Could not subscribe to notifications: ' + err);
+            this.isSubscribeDisabled.set(false);
+          }
+        }
+      );
     }
   }
 
   notify() {
-    this.notification.notify().subscribe();
+    this.notification.notify().subscribe(
+      {
+        next: () => {
+          alert('Notification sent');
+          this.isNotifyDisabled.set(false);
+        },
+        error: err => {
+          alert('Could not send notification: ' + err);
+          this.isNotifyDisabled.set(false);
+        }
+      }
+    );
   }
 
   toggleTodos() {
