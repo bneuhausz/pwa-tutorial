@@ -41,6 +41,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/pwa-tutorial",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -122,6 +123,9 @@
               "src/styles.scss"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
