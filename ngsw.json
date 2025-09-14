@@ -1,0 +1,99 @@
+{
+  "configVersion": 1,
+  "timestamp": 1757868077761,
+  "appData": {
+    "version": "2.0.0"
+  },
+  "index": "/pwa-tutorial/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/pwa-tutorial/favicon.ico",
+        "/pwa-tutorial/index.html",
+        "/pwa-tutorial/main-6Z33RFK7.js",
+        "/pwa-tutorial/manifest.webmanifest",
+        "/pwa-tutorial/polyfills-5CFQRCPP.js",
+        "/pwa-tutorial/styles-DH2QI2FK.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/pwa-tutorial/icons/icon-128x128.png",
+        "/pwa-tutorial/icons/icon-144x144.png",
+        "/pwa-tutorial/icons/icon-152x152.png",
+        "/pwa-tutorial/icons/icon-192x192.png",
+        "/pwa-tutorial/icons/icon-384x384.png",
+        "/pwa-tutorial/icons/icon-512x512.png",
+        "/pwa-tutorial/icons/icon-72x72.png",
+        "/pwa-tutorial/icons/icon-96x96.png",
+        "/pwa-tutorial/icons/nb_logo_original.avif"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "todos",
+      "patterns": [
+        "https:\\/\\/jsonplaceholder\\.typicode\\.com\\/todos"
+      ],
+      "strategy": "freshness",
+      "maxSize": 1,
+      "maxAge": 86400000,
+      "timeoutMs": 5000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/pwa-tutorial/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "/pwa-tutorial/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
+    "/pwa-tutorial/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
+    "/pwa-tutorial/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
+    "/pwa-tutorial/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
+    "/pwa-tutorial/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
+    "/pwa-tutorial/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
+    "/pwa-tutorial/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
+    "/pwa-tutorial/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
+    "/pwa-tutorial/icons/nb_logo_original.avif": "2d1204e669e43878fd344137fd6e32041e6bc601",
+    "/pwa-tutorial/index.html": "b6ed1d41faffb4b3c353918d8b08a8c7e6db5b4f",
+    "/pwa-tutorial/main-6Z33RFK7.js": "d570f82dc01c56db5599f6e404c6f26066f535b2",
+    "/pwa-tutorial/manifest.webmanifest": "f9baec8b4eeba1eeb83726ccbd85c1e1aab5e947",
+    "/pwa-tutorial/polyfills-5CFQRCPP.js": "f2241e9a25858f895ce299d15f6f22e849e2fd72",
+    "/pwa-tutorial/styles-DH2QI2FK.css": "402ca39d5091932084fa787a2ffcfe43421cb04d"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

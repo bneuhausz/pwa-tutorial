@@ -1,0 +1,14 @@
+{
+  "name": "my-awesome-pwa",
+  "short_name": "my-awesome-pwa",
+  "display": "minimal-ui",
+  "theme_color": "#071793",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "icons/nb_logo_original.avif",
+      "type": "image/avif"
+    }
+  ]
+}
