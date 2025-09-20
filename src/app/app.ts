@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { afterNextRender, Component, computed, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NetworkService } from './shared/network/network';
 import { SwPush, SwUpdate, VersionReadyEvent } from '@angular/service-worker';
@@ -6,6 +6,7 @@ import { filter } from 'rxjs';
 import { NotificationService } from './shared/notification/notification';
 import { environment } from '../environments/environment';
 import { Todos } from "./todos";
+import { InstallService } from './shared/install/install';
 
 interface AppData {
   version: string;
@@ -28,6 +29,10 @@ interface AppData {
     <button (click)="notify()" [disabled]="isNotifyDisabled()">Send Notification</button>
     <button (click)="toggleTodos()">Toggle Todos</button>
 
+    @if (showInstallButton()) {
+      <button (click)="install.promptToInstall()">Install App</button>
+    }
+
     @if (showTodos()) {
       <app-todos></app-todos>
     }
@@ -40,6 +45,7 @@ export class App {
   private readonly swUpdate = inject(SwUpdate);
   private readonly notification = inject(NotificationService);
   private readonly swPush = inject(SwPush);
+  protected readonly install = inject(InstallService);
 
   protected readonly title = signal('pwa-tutorial');
   protected readonly isNewVersionReady = signal(false);
@@ -48,6 +54,9 @@ export class App {
   protected readonly isNotifyDisabled = signal(false);
 
   protected readonly showTodos = signal(false);
+
+  readonly #isInstalled = signal(false);
+  protected readonly showInstallButton = computed(() => !this.#isInstalled() && this.install.canInstall());
 
   constructor() {
     if (this.swUpdate.isEnabled) {
@@ -58,6 +67,11 @@ export class App {
           this.isNewVersionReady.set(true);
         });
     }
+
+    afterNextRender(() => {
+      const isRunningAsApp = (window.matchMedia('(display-mode: standalone)').matches) || (window.matchMedia('(display-mode: minimal-ui)').matches);
+      this.#isInstalled.set(isRunningAsApp);
+    });
   }
 
   protected reload() {

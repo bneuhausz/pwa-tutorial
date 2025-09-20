@@ -6,6 +6,7 @@ This repo contains the source code for my Angular PWA tutorial, which you can fi
 - [Part 5 - Controlling appearance and installability](https://bneuhausz.dev/blog/angular-pwa-tutorial-part-5)
 - [Part 6 - Let's talk caching](https://bneuhausz.dev/blog/angular-pwa-tutorial-part-6)
 - [Part 7 - Deploying our apps to GitHub Pages and Render](https://bneuhausz.dev/blog/angular-pwa-tutorial-part-7)
+- [Part 8 - Adding our own install button](https://bneuhausz.dev/blog/angular-pwa-tutorial-part-8)
 
 # PwaTutorial
 
