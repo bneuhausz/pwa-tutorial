@@ -7,8 +7,9 @@
   "start_url": "./",
   "icons": [
     {
-      "src": "icons/nb_logo_original.avif",
-      "type": "image/avif"
+      "src": "icons/nb-logo-original.png",
+      "type": "image/png",
+      "sizes": "144x144"
     }
   ]
 }
