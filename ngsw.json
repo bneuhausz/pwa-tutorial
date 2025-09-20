@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1757868683391,
+  "timestamp": 1758361715356,
   "appData": {
     "version": "2.0.0"
   },
@@ -16,7 +16,7 @@
       "urls": [
         "/pwa-tutorial/favicon.ico",
         "/pwa-tutorial/index.html",
-        "/pwa-tutorial/main-6Z33RFK7.js",
+        "/pwa-tutorial/main-MBDUQ6YS.js",
         "/pwa-tutorial/manifest.webmanifest",
         "/pwa-tutorial/polyfills-5CFQRCPP.js",
         "/pwa-tutorial/styles-DH2QI2FK.css"
@@ -39,7 +39,7 @@
         "/pwa-tutorial/icons/icon-512x512.png",
         "/pwa-tutorial/icons/icon-72x72.png",
         "/pwa-tutorial/icons/icon-96x96.png",
-        "/pwa-tutorial/icons/nb_logo_original.avif"
+        "/pwa-tutorial/icons/nb-logo-original.png"
       ],
       "patterns": []
     }
@@ -70,10 +70,10 @@
     "/pwa-tutorial/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/pwa-tutorial/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/pwa-tutorial/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/pwa-tutorial/icons/nb_logo_original.avif": "2d1204e669e43878fd344137fd6e32041e6bc601",
-    "/pwa-tutorial/index.html": "b6ed1d41faffb4b3c353918d8b08a8c7e6db5b4f",
-    "/pwa-tutorial/main-6Z33RFK7.js": "d570f82dc01c56db5599f6e404c6f26066f535b2",
-    "/pwa-tutorial/manifest.webmanifest": "f9baec8b4eeba1eeb83726ccbd85c1e1aab5e947",
+    "/pwa-tutorial/icons/nb-logo-original.png": "7de1f989f9f2c0e16ab5dd8ac1796a5f1beec8a1",
+    "/pwa-tutorial/index.html": "355aed30fe073f3b26e5291c932f647fdf91f45e",
+    "/pwa-tutorial/main-MBDUQ6YS.js": "6b33b1c72789de5461fc966a67bb515dfaedb503",
+    "/pwa-tutorial/manifest.webmanifest": "218aec47c14600d78d604053e106636c122beb5d",
     "/pwa-tutorial/polyfills-5CFQRCPP.js": "f2241e9a25858f895ce299d15f6f22e849e2fd72",
     "/pwa-tutorial/styles-DH2QI2FK.css": "402ca39d5091932084fa787a2ffcfe43421cb04d"
   },
